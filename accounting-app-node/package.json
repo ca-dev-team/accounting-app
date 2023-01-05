@@ -1,0 +1,31 @@
+{
+  "name": "accounting-app-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart":"npm install", 
+    "start": "node index.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ca-dev-team/accounting-app.git"
+  },
+  "keywords": [
+    "accounting",
+    "finance"
+  ],
+  "author": "ca-dev-team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ca-dev-team/accounting-app/issues"
+  },
+  "homepage": "https://github.com/ca-dev-team/accounting-app#readme",
+  "devDependencies": {
+    "electron": "^22.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
