@@ -1,1 +1,1 @@
-# countable-app
+# accounting-app
