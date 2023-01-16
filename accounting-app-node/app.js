@@ -1,14 +1,21 @@
+if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config();
+}
+
 const express = require("express");
-const jwt = require("jsonwebtoken");
+const bodyParser = require("body-parser");
+const apiRouter = require("./src/routes/api");
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.get("/api", (req, res) => {
-    res.json({ 
-        message: "un mensaje"
-    })
-});
+require('./src/config/db.config');
 
-app.listen(3000, function() {
-    console.log("la app está corriendo...");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use('/api', apiRouter);
+
+app.listen(PORT, function() {
+    console.log("La app está corriendo en el puerto " + PORT);
 });
